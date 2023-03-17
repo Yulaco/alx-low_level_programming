@@ -1,22 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - Prints single digit number of base 10
- *
- * Return: Always 0 (Success)
+ *main - Prints single digit numbers of base 10
+ *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int a;
+int n;
 
-	a = 97;
-	while (a <= 122)
-	{
-		if (!(a == 101 || a == 113))
-			putchar(a);
-		a++;
-	}
-	putchar('\n');
-	return (0);
+for (n = 0; n < 10; n++)
+{
+printf("%d", n);
 }
+printf("\n");
+return (0);
+}
+
