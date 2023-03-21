@@ -3,11 +3,10 @@
 /**
  * main - Prints the sign of a number.
  *
- * Return: 1 nuber greater than 0, 0  number zeru, -1 number less than zero..
+ * Return: 1 for positive number, -1 for negative number, 0 for zero number.
  */
 int print_sign(int n)
 {
-
 	if (n > 0)
 	{
 		_putchar(43);
@@ -18,7 +17,7 @@ int print_sign(int n)
 		_putchar(45);
 		return (-1);
 	}
-	else (n = 0);
+	else
 	{
 		_putchar(48);
 		return (0);
