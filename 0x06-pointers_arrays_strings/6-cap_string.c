@@ -4,7 +4,7 @@
  * cap_string - Function that capitalizes all words of a string.
  * @n: capitalized string.
  *
- * Return: 0.
+ * Return: Pointer.
  */
 char *cap_string(char *n)
 {
@@ -14,7 +14,6 @@ char *cap_string(char *n)
 	{
 		while (!(n[listWords] >= 'a' && n[listWords] <= 'z'))
 			listWords++;
-
 
 		if (n[listWords - 1] == ' ' ||
 			n[listWords - 1] == '\t' ||
@@ -32,9 +31,9 @@ char *cap_string(char *n)
 			 listWords == 0)
 		n[listWords] -= 32;
 
-		listWords++;
+	listWords++;
 	}
-	return (0);
+	return (n);
 }
 
 
