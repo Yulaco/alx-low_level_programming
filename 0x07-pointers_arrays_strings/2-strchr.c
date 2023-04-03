@@ -5,15 +5,16 @@
  * @s: String value.
  * @c: First occurence of value.
  *
- * Return: pointer.
+ * Return: 0.
  */
-char *strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
-	int memory1 = 0;
-	for (; s[memory1] >= '\0'; memory1++)
+	int memory1;
+
+	for (memory1 = 0; s[memory1] >= '\0'; memory1++)
 	{
 		if (s[memory1] == c)
-			return(&s[memory1]);
+			return (s + memory1);
 	}
-	return (pointer);
+	return (0);
 }
