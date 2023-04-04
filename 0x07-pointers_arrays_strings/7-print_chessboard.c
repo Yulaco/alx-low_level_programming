@@ -2,12 +2,25 @@
 
 /**
  * print_chessboard - Function that prints a chessboard.
- * @:
+ * @a: the row of the array
  *
  * Return: 0.
  */
-void print_chesboard(char (*a)[8])
+void print_chessboard(char (*a)[8])
 {
-	return (0);
-}
+	int i, j;
 
+	for (i = 0; i < 8; i = i + 1)
+	{
+		for (j = 0; j < 8; j = j + 1)
+		{
+			if (j == 7)
+			{
+				_putchar(a[i][j]);
+				_putchar('\n');
+			}
+			else
+				_putchar(a[i][j]);
+		}
+	}
+}
