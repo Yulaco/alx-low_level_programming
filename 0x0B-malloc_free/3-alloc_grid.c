@@ -24,9 +24,9 @@ int **alloc_grid(int width, int height)
 	for (a = 0; a < height; a++)
 	{
 	val_pointer[a] = malloc(sizeof(int) * width);
-		if (!val_pointer[a])
-			return (NULL);
-		for (b = 0; b < width; b++)
+	if (!val_pointer[a])
+		return (NULL);
+	for (b = 0; b < width; b++)
 	val_pointer[a][b] = 0;
 	}
 	return (val_pointer);
