@@ -1,9 +1,9 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
  * init_dog - Function that assigns a variable of type struct dog.
- * 
+ *
  * @d: Pointer directing to data type struct.
  * @name: Pointer directing to character.
  * @age: Age of dog indicated as type float.
@@ -11,7 +11,7 @@
  *
  */
 
-void init_dog(struct dog * d, char *name, float age, char *owner)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
 	d = malloc(sizeof(struct dog));
