@@ -10,7 +10,7 @@ int sqrt_val(int n, int square)
 {
 	if (n * n == square)
 		return (n);
-	
+
 	else if (n * n > square)
 		return (-1);
 
