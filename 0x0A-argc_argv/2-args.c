@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - program displays every argument it gets
- * @rgc: counts command line arguments
+ * @argc: counts command line arguments
  * @argv: array of pointers which lists arguments
  *
  * Return: 0.
