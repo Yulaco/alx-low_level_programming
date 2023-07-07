@@ -6,8 +6,10 @@
  *
  * Return: 0.
  */
-int main(_attribute_((unused)) int argc, _attribute_((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
-	print("%s\n", *argv);
+	(void) argc;
+
+	printf("%s\n", *argv);
 	return (0);
 }
