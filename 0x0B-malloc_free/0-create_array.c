@@ -6,14 +6,24 @@
  * @size: size of integer
  * @c: character to be checked
  *
- * Return: null
+ * Return: NULL
  */
 char *create_array(unsigned int size, char c)
 {
 	char *value_ptr;
 	unsigned int count_size;
 
+	if (size == 0)
+	{
+		return (NULL);
+	}
+
 	value_ptr = malloc(size * sizeof(char));
+
+	if (value_ptr == NULL)
+	{
+		return (NULL);
+	}
 
 	for (count_size = 0; count_size < size; count_size++)
 	{
