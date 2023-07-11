@@ -5,7 +5,7 @@
  * @s1: pointer to memory
  * @s2: newly allocated space in memory
  *
- * Return: val_ptr
+ * Return: connect
  */
 char *str_concat(char *s1, char *s2)
 {
