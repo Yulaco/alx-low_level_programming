@@ -8,7 +8,6 @@
  *
  * Return: free grid
  */
-
 void free_grid(int **grid, int height)
 {
 	int clean_grid = 0;
