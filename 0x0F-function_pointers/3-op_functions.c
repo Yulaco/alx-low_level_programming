@@ -2,10 +2,11 @@
 
 /**
  * op_add - Function sums integers.
+ *
  * @a: First number to sum.
  * @b: Second number to sum.
  *
- * Return: Sum of a nad b.
+ * Return: Sum of a and b.
  */
 int op_add(int a, int b)
 {
@@ -57,7 +58,7 @@ int op_div(int a, int b)
  * @a: First number to get remainder.
  * @b: Second number to get remainder.
  *
- * Return: Remainder of teh division of a by b.
+ * Return: Remainder of the division of a by b.
  */
 int op_mod(int a, int b)
 {
