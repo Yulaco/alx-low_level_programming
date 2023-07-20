@@ -1,4 +1,4 @@
-#0x10. C-Variadic Functions#
+0x10. C-Variadic Functions
 
 The following project works on C programming variadic functions, which are functions that take in any number of arguments as inputs.
 
