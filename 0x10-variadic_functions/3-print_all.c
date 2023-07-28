@@ -10,7 +10,7 @@ void print_char(va_list arg)
 {
 	char letra;
 
-	letra = va_arg(arg, char);
+	letra = va_arg(arg, int);
 	printf("%c", letra);
 }
 
@@ -22,7 +22,7 @@ void print_int(va_list arg)
 {
 	int numero;
 
-	numero va_arg(arg, int);
+	numero = va_arg(arg, int);
 	printf("%d", numero);
 }
 
@@ -59,7 +59,7 @@ void print_string(va_list arg)
  *
  * @format: Different types of parameters passed to the function.
  * @...: Number of parameters.
- * @separator: Strings to print.
+ * @*separator: Strings to print.
  *
  * Return: 0.
  */
@@ -93,8 +93,7 @@ void print_all(const char * const format, ...)
 		cont1++;
 	}
 
-	printf("\n");
-
 	va_end(list_arg);
+	printf("\n");
 
 }
