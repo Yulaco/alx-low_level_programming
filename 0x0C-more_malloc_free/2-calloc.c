@@ -22,6 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (alocar == NULL)
 		return (NULL);
 
+	memo = 0;
 	while (memo < nmemb * size)
 	{
 		alocar[memo] = 0;
