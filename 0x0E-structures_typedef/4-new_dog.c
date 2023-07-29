@@ -13,19 +13,19 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *novo;
+	dog_t *new_dog;
 
-	novo = malloc(sizeof(dog_t));
+	new_dog = malloc(sizeof(dog_t));
 
-	if (novo == NULL)
+	if (new_dog == NULL)
 	{
 		printf("fail\n");
 		return (NULL);
 	}
 
-	novo->name = strdup(name);
-	novo->age = age;
-	novo->owner = strdup(owner);
+	new_dog->name = strdup(name);
+	new_dog->age = age;
+	new_dog->owner = strdup(owner);
 
-	return (novo);
+	return (new_dog);
 }
