@@ -1,24 +1,31 @@
 #include "main.h"
 #include <string.h>
+int word_count(char *s);
+
 
 /**
- * strtow - function splits a string into words
- * @str: pointer to string
+ * strtow - Function splits a string into words.
+ * @str: Pointer to string.
  *
- * Return: 0
+ * Return: If fail NULL.
  */
 char **strtow(char *str)
 {
 	char **ptr, *temp_ptr;
-	int a, b = 0, length, wrd, t = 0, begin, close;
+	int a, b = 0, length, t = 0, wrd, begin = 0, close;
 
-	for (length = 0; *(str + length); length++)
-	wrd = cnt(str);
+	if (str == NULL)
+		return (NULL);
+
+	for (length = 0; (*(str + length)); length++)
+		continue;
+
+	wrd = word_count(str);
 
 	if (wrd == 0)
 		return (NULL);
 
-	ptr = (char **)malloc(sizeof(char *) * (wrd + 1));
+	ptr = malloc(sizeof(char *) * (wrd + 1));
 	if (ptr == NULL)
 		return (NULL);
 
@@ -29,12 +36,17 @@ char **strtow(char *str)
 			if (t)
 			{
 				close = a;
-				temp_ptr = (char *) malloc(sizeof(char) * (t + 1));
-					if (temp_ptr == NULL)
+				temp_ptr = malloc(sizeof(char) * (t + 1));
+				if (temp_ptr == NULL)
+				{
+					for (b = 0; b < wrd; b++)
+						free(ptr[b]);
+					free(ptr);
 					return (NULL);
-				begin = 0, close = 0;
+				}
+
 				while (begin < close)
-				*temp_ptr++ = str[begin++];
+					*temp_ptr++ = str[begin++];
 				*temp_ptr = '\0';
 				ptr[b] = temp_ptr - t;
 				b++;
@@ -46,4 +58,29 @@ char **strtow(char *str)
 	}
 	ptr[b] = NULL;
 	return (ptr);
+}
+
+/**
+ * word_count - Counts words.
+ * @s: String to check.
+ *
+ * Return: Count of words.
+ */
+int word_count(char *s)
+{
+	int a = 0, j, i = 0;
+
+	j = 0;
+	while (s[j] != '\0')
+	{
+		if (s[j] == ' ')
+			a = 0;
+		else if (a == 0)
+		{
+			a = 1;
+			i++;
+		}
+		j++;
+	}
+	return (i);
 }
