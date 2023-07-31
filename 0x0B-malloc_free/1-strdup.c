@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (str_length = 0; str[str_length]; str_length++)
+	for (str_length = 0; str[str_length] != '\0'; str_length++)
 
 	addr_var = malloc(sizeof(char) * (str_length + 1));
 
@@ -31,6 +31,5 @@ char *_strdup(char *str)
 	{
 		addr_var[a] = str[a];
 	}
-	addr_var[a] = '\0';
 	return (addr_var);
 }
