@@ -31,6 +31,5 @@ char *_strdup(char *str)
 	{
 		addr_var[a] = str[a];
 	}
-	add_var[a] = '\0';
 	return (addr_var);
 }
