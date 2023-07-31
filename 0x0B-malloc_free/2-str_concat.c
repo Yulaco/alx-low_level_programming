@@ -10,7 +10,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *connect;
-	int a, b, s1_leng, s2_leng;
+	int a, b;
 
 	if (s1 == NULL)
 		s1 = " ";
@@ -18,12 +18,10 @@ char *str_concat(char *s1, char *s2)
 		s2 = " ";
 
 	for (a = 0; s1[a] != '\0'; a++)
-		s1_leng++;
 
 	for (b = 0; s2[b] != '\0'; b++)
-		s2_leng++;
 
-	connect = malloc(sizeof(char) * (s1_leng + s2_leng + 1));
+	connect = malloc(sizeof(char) * (a + b + 1));
 
 	if (connect == NULL)
 		return (NULL);
