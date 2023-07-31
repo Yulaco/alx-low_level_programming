@@ -1,48 +1,46 @@
 #include "main.h"
 
 /**
- * argstostr - function concatenates all arguments of program
- * @ac: counts argument
- * @av: array of character pointer listing arguments
+ * argstostr - Function concatenates all arguments of program.
+ * @ac: Counts argument.
+ * @av: Pointer to array of characters.
  *
- * Return: 0
+ * Return: NULL if either ac == 0, or av == NULL.
  */
 char *argstostr(int ac, char **av)
 {
-	int a, b, cont1 = 0, cont2 = 0;
+	int a, b, cont = 0, leng = 0;
 	char *ptr;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	a = 0;
-	while (a < ac)
-		a++;
+	for (a = 0; a < ac; a++)
 	{
-		for (b = 0; av[a][b]; b++)
-			a++;
-	}
-	cont2 += ac;
 
-	ptr = malloc(cont2 + 1 * sizeof(char));
+		for (b = 0; av[a][b]; b++)
+		{
+			leng++;
+		}
+		leng++;
+	}
+
+	ptr = malloc((leng + 1) * sizeof(char));
+
 	if (ptr == NULL)
 		return (NULL);
 
 	a = 0;
 	while (a < ac)
+	{
+		for (b = 0; av[a][b]; b++)
+		{
+			ptr[cont++] = av[a][b];
+		}
+		ptr[cont++] = '\n';
 		a++;
-	{
-	for (b = 0; av[a][b]; b++)
-	{
-		ptr[cont1] = av[a][b];
-		cont1++;
 	}
-	if (ptr[cont1] == '\0')
-
-	{
-		ptr[cont1++] = '\n';
-	}
-	}
+	ptr[cont++] = '\0';
 	return (ptr);
 }
 
