@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_listint - Returns the sum of all the data(n) of listint_t.
+ * sum_listint - Returns the sum of all data(n) of listint_t.
  * @head: Pointer to first node.
  *
  * Return: If list empty 0.
