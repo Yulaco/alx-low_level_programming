@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint - Prints all the items of linstint_t.
+ * print_listint - Prints all items of linstint_t.
  * @h: Pointer to the first node.
  *
  * Return: Number of nodes.
