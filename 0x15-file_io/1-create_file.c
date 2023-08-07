@@ -24,9 +24,10 @@ int create_file(const char *filename, char *text_content)
 
 		 while (text_content[length])
 		{
-			length++;
 			file2 = write(file1, text_content, length);
+			length++;
 		}
+
 		if (file2 == -1)
 			return (-1);
 	}
