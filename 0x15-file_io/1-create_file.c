@@ -20,9 +20,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		 length = 0;
+		length = 0;
 
-		 while (text_content[length])
+		while (text_content[length])
 		{
 			length++;
 		}
